@@ -6,7 +6,6 @@ public class AccountPage {
     public AccountPage(WebDriver driver) {
         this.driver = driver;
     }
-
     By updatePersonalDate = By.xpath("//a[@class=\"qaMyAccountCredentials\"]");
     By updateAddress = By.xpath("//a[@class=\"qaMyAccountBillingAddress\"]");
     By updateMailSpam = By.xpath("//a[@class=\"qaMyAccountNewsletters\"]");
