@@ -12,13 +12,13 @@ public class TestStock {public WebDriver driver;
 
     @BeforeClass
     public static void setupClass() {
-//        WebDriverManager.chromedriver().setup();
-        WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.firefoxdriver().setup();
     }
     @Before
     public void setUp() {
- //       driver = new ChromeDriver();
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
+//        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
