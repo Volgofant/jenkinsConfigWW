@@ -19,7 +19,6 @@ public class TestStock {public WebDriver driver;
         options.addArguments("–no-sandbox");
         options.addArguments("–disable-dev-shm-usage");
         options.setExperimentalOption("useAutomationExtension", false);
-        WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
         mainPage = new MainPage(driver);
