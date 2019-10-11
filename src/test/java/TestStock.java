@@ -16,11 +16,14 @@ public class TestStock {public WebDriver driver;
     }
     @Before
     public void setUp() {
-//        File file = new File("");
-//        File dir = new File(file.getAbsolutePath() + "/chromedriver");
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        File file = new File("");
+        File dir = new File(file.getAbsolutePath() + "\\webdriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", String.valueOf(dir));
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--no-sandbox");
+        driver = new ChromeDriver(chromeOptions);
 
-        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
         mainPage = new MainPage(driver);
