@@ -1,7 +1,5 @@
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.sql.Connection;
@@ -10,9 +8,12 @@ import java.util.concurrent.TimeUnit;
 public class TestStock {public WebDriver driver;
     private MainPage mainPage;
 
+    @BeforeClass
+    public static void setupClass() {
+        WebDriverManager.chromedriver().setup();
+    }
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\viktor.nenashev\\WebDrivers\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -31,13 +32,13 @@ public class TestStock {public WebDriver driver;
         driver.findElement(By.xpath("//input[@id=\"submitbutton\"]")).click();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("http://bob-shop.westwing.ru/pet/product#120739/creation/simples");
-        Assert.assertEquals("741", driver.findElement(By.xpath("//div[@class=\"x-list-body-inner\"]/dl/dt[8]/em")).getText());
+        Assert.assertEquals("2280", driver.findElement(By.xpath("//div[@class=\"x-list-body-inner\"]/dl/dt[8]/em")).getText());
         driver.get("http://bob-shop.westwing.ru/stock/upload");
         driver.findElement(By.xpath("//input[@id=\"doc_path\"]")).sendKeys("C:\\автозагрузка стока Лайв\\secondarily test upload.csv");
         driver.findElement(By.xpath("//input[@id=\"submitbutton\"]")).click();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("http://bob-shop.westwing.ru/pet/product#120739/creation/simples");
-        Assert.assertEquals("1284", driver.findElement(By.xpath("//div[@class=\"x-list-body-inner\"]/dl/dt[8]/em")).getText());
+        Assert.assertEquals("2823", driver.findElement(By.xpath("//div[@class=\"x-list-body-inner\"]/dl/dt[8]/em")).getText());
     }
     @Test
     public void stockUploadOnStage() {
@@ -60,7 +61,9 @@ public class TestStock {public WebDriver driver;
     }
     @After
     public void tierDown() {
-        driver.quit();
+        if(driver != null) {
+            driver.quit();
+        }
     }
 }
 
