@@ -16,9 +16,9 @@ public class TestStock {public WebDriver driver;
     }
     @Before
     public void setUp() {
-        File file = new File("");
-        File dir = new File(file.getAbsolutePath() + "/chromedriver");
-        System.setProperty("webdriver.chrome.driver", String.valueOf(dir));
+//        File file = new File("");
+//        File dir = new File(file.getAbsolutePath() + "/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
