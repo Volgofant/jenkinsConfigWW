@@ -15,7 +15,6 @@ public class TestStock {public WebDriver driver;
     }
     @Before
     public void setUp() {
-        driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("–no-sandbox");
         options.addArguments("–disable-dev-shm-usage");
