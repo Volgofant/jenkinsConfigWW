@@ -4,6 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class TestStock {public WebDriver driver;
@@ -15,10 +16,11 @@ public class TestStock {public WebDriver driver;
     }
     @Before
     public void setUp() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("–no-sandbox");
-        options.addArguments("–disable-dev-shm-usage");
-        options.setExperimentalOption("useAutomationExtension", false);
+        File file = new File("");
+        File dir = new File(file.getAbsolutePath() + "\\webdriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", String.valueOf(dir));
+        System.out.println(dir);
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
         mainPage = new MainPage(driver);
