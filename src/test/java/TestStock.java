@@ -1,10 +1,13 @@
+import com.google.common.collect.ImmutableMap;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class TestStock {public WebDriver driver;
@@ -17,8 +20,13 @@ public class TestStock {public WebDriver driver;
     }
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        driver = new ChromeDriver();
+//        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        ChromeDriverService service = new ChromeDriverService.Builder()
+                .usingDriverExecutable(new File("/usr/bin/chromedriver"))
+                .usingAnyFreePort()
+                .withEnvironment(ImmutableMap.of("DISPLAY",":20"))
+                .build();
+        driver = new ChromeDriver(service);
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
