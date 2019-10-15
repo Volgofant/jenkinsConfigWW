@@ -9,14 +9,16 @@ import java.util.concurrent.TimeUnit;
 
 public class TestStock {public WebDriver driver;
     private MainPage mainPage;
+
+    @BeforeClass
+    public static void setupClass() {
+        WebDriverManager.chromedriver().setup();
+
+    }
     @Before
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("--no-sandbox");
-        driver = new ChromeDriver(chromeOptions);
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
