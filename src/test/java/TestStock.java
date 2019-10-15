@@ -9,14 +9,9 @@ import java.util.concurrent.TimeUnit;
 
 public class TestStock {public WebDriver driver;
     private MainPage mainPage;
-
-    @BeforeClass
-    public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
-
-    }
     @Before
     public void setUp() {
+        WebDriverManager.chromedriver().setup();
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
