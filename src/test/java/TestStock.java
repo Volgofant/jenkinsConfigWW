@@ -10,19 +10,15 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-public class TestStock {public WebDriver driver;
+public class TestStock {
+    public WebDriver driver;
     private MainPage mainPage;
 
-    @BeforeClass
-    public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
-
-    }
     @Before
     public void setUp() {
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeDriverService service = new ChromeDriverService.Builder()
-                .usingDriverExecutable(new File("/usr/bin/chromedriver"))
+                .usingDriverExecutable(new File("usr\\bin\\chromedriver.exe"))
                 .usingAnyFreePort()
                 .withEnvironment(ImmutableMap.of("DISPLAY",":20"))
                 .build();
