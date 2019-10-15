@@ -11,7 +11,7 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class TestStock {
-    public WebDriver driver;
+    public WebDriver driver = new ChromeDriver();
     private MainPage mainPage;
 
     @Before
@@ -22,7 +22,6 @@ public class TestStock {
 //                .usingAnyFreePort()
 //                .withEnvironment(ImmutableMap.of("DISPLAY",":20"))
 //                .build();
-        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
