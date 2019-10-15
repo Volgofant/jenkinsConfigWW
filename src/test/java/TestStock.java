@@ -1,3 +1,4 @@
+import com.codeborne.selenide.Configuration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import org.openqa.selenium.*;
@@ -22,6 +23,9 @@ public class TestStock {public WebDriver driver;
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
         driver = new ChromeDriver(chromeOptions);
+        Configuration.browserSize = "1920x1080";
+        Configuration.reportsFolder = "target/allure-results";
+        Configuration.headless = true;
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
