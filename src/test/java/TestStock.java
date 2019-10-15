@@ -5,13 +5,16 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.GeckoDriverInfo;
 
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class TestStock {
-    public WebDriver driver = new ChromeDriver();
+//    public WebDriver driver = new ChromeDriver();
+    public WebDriver driver = new FirefoxDriver();
     private MainPage mainPage;
 
     @Before
