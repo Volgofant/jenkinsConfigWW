@@ -18,7 +18,7 @@ public class TestStock {
     public void setUp() {
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeDriverService service = new ChromeDriverService.Builder()
-                .usingDriverExecutable(new File("usr\\bin\\chromedriver.exe"))
+                .usingDriverExecutable(new File("usr/bin/chromedriver.exe"))
                 .usingAnyFreePort()
                 .withEnvironment(ImmutableMap.of("DISPLAY",":20"))
                 .build();
