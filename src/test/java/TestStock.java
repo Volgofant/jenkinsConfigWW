@@ -17,12 +17,12 @@ public class TestStock {
     @Before
     public void setUp() {
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        ChromeDriverService service = new ChromeDriverService.Builder()
-                .usingDriverExecutable(new File("usr/bin/chromedriver.exe"))
-                .usingAnyFreePort()
-                .withEnvironment(ImmutableMap.of("DISPLAY",":20"))
-                .build();
-        driver = new ChromeDriver(service);
+//        ChromeDriverService service = new ChromeDriverService.Builder()
+//                .usingDriverExecutable(new File("usr/bin/chromedriver.exe"))
+//                .usingAnyFreePort()
+//                .withEnvironment(ImmutableMap.of("DISPLAY",":20"))
+//                .build();
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
