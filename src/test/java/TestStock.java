@@ -5,7 +5,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.GeckoDriverInfo;
 
 
@@ -13,18 +12,16 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class TestStock {
-//    public WebDriver driver = new ChromeDriver();
-    public WebDriver driver = new FirefoxDriver();
+    public WebDriver driver = new ChromeDriver();
     private MainPage mainPage;
 
     @Before
     public void setUp() {
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-//        ChromeDriverService service = new ChromeDriverService.Builder()
-//                .usingDriverExecutable(new File("usr/bin/chromedriver.exe"))
-//                .usingAnyFreePort()
-//                .withEnvironment(ImmutableMap.of("DISPLAY",":20"))
-//                .build();
+        ChromeDriverService service = new ChromeDriverService.Builder()
+                .usingAnyFreePort()
+                .withEnvironment(ImmutableMap.of("DISPLAY",":20"))
+                .build();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
