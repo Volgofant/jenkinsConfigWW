@@ -60,7 +60,7 @@ public class TestMainClass {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
 //        ChromeOptions options = new ChromeOptions();
 //        options.setExperimentalOption("useAutomationExtension", false);
         driver = new ChromeDriver();
