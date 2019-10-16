@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -60,9 +61,11 @@ public class TestMainClass {
     @Before
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.setExperimentalOption("useAutomationExtension", false);
+        driver = new ChromeDriver(options);
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
         mainPage = new MainPage(driver);
         mainPage.closeFuckingCoockie();
