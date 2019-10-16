@@ -61,9 +61,10 @@ public class TestMainClass {
     @Before
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
-//        ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
 //        options.setExperimentalOption("useAutomationExtension", false);
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
         mainPage = new MainPage(driver);
         mainPage.closeFuckingCoockie();
