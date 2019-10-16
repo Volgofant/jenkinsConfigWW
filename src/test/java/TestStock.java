@@ -4,18 +4,37 @@ import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.io.FileHandler;
 
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class TestStock {public WebDriver driver;
     private MainPage mainPage;
 
+    Date dateNow = new Date();
+    SimpleDateFormat format = new SimpleDateFormat("hhч mmмин ssсек");
+    String fileName = format.format(dateNow) + ".png";
+
+    public TestStock screenshot() {
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileHandler.copy(screenshot, new File("C:\\Users\\viktor.nenashev\\screenshots\\" + fileName));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return this;
+    }
     @BeforeClass
     public static void setupClass() {
         WebDriverManager.chromedriver().setup();
 
     }
+
     @Before
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
@@ -72,6 +91,7 @@ public class TestStock {public WebDriver driver;
     }
     @After
     public void tierDown() {
+        screenshot();
         if(driver != null) {
             driver.quit();
         }
