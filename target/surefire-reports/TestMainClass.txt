@@ -1,0 +1,117 @@
+-------------------------------------------------------------------------------
+Test set: TestMainClass
+-------------------------------------------------------------------------------
+Tests run: 23, Failures: 2, Errors: 8, Skipped: 0, Time elapsed: 286.428 s <<< FAILURE! - in TestMainClass
+WishList  Time elapsed: 14.954 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@data-sku="RUQ19TES899539-150452"]/parent::article"}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PMR164', ip: '192.168.42.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '11.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Windows\TEMP\scoped_dir4...}, goog:chromeOptions: {debuggerAddress: localhost:60844}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 34fb76e1b62ed02e1ce8fe9e7a936d22
+*** Element info: {Using=xpath, value=//button[@data-sku="RUQ19TES899539-150452"]/parent::article}
+	at TestMainClass.WishList(TestMainClass.java:273)
+
+forgetPass  Time elapsed: 18.829 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="nb-1"]/body/div[2]/div[5]/div/div[3]/div[3]/div[2]/div[5]/div[1]/div/div[3]/div/div[1]/table/tbody/tr[1]/td[2]/table[1]/tbody/tr/td/table[2]/tbody/tr/td/table[3]/tbody/tr/td/div/table/tbody/tr/td/a"}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PMR164', ip: '192.168.42.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '11.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Windows\TEMP\scoped_dir3...}, goog:chromeOptions: {debuggerAddress: localhost:60878}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 2818fe9358c1dc16ea470307ce0cd7b5
+*** Element info: {Using=xpath, value=//*[@id="nb-1"]/body/div[2]/div[5]/div/div[3]/div[3]/div[2]/div[5]/div[1]/div/div[3]/div/div[1]/table/tbody/tr[1]/td[2]/table[1]/tbody/tr/td/table[2]/tbody/tr/td/table[3]/tbody/tr/td/div/table/tbody/tr/td/a}
+	at TestMainClass.forgetPass(TestMainClass.java:446)
+
+WishListProductInBasket  Time elapsed: 13.748 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@data-sku="RUQ19TES899539-150452"]/parent::article"}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PMR164', ip: '192.168.42.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '11.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Windows\TEMP\scoped_dir5...}, goog:chromeOptions: {debuggerAddress: localhost:60963}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 39b676273307bf160c322942045ad30e
+*** Element info: {Using=xpath, value=//button[@data-sku="RUQ19TES899539-150452"]/parent::article}
+	at TestMainClass.WishListProductInBasket(TestMainClass.java:305)
+
+stockUploadOnStage  Time elapsed: 17.71 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[421]> but was:<[936]>
+	at TestMainClass.stockUploadOnStage(TestMainClass.java:486)
+
+doOrderFirstTime  Time elapsed: 11.373 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@data-sku="RUQ19TES899539-150452"]/parent::article"}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PMR164', ip: '192.168.42.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '11.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Windows\TEMP\scoped_dir3...}, goog:chromeOptions: {debuggerAddress: localhost:61125}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e49ff353888646154fb309fb29939017
+*** Element info: {Using=xpath, value=//button[@data-sku="RUQ19TES899539-150452"]/parent::article}
+	at TestMainClass.doOrderFirstTime(TestMainClass.java:335)
+
+WishListProductDelete  Time elapsed: 13.057 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@data-sku="RUQ19TES899539-150452"]/parent::article"}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PMR164', ip: '192.168.42.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '11.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Windows\TEMP\scoped_dir5...}, goog:chromeOptions: {debuggerAddress: localhost:61154}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 90137314ae09df21887fe8e984f83185
+*** Element info: {Using=xpath, value=//button[@data-sku="RUQ19TES899539-150452"]/parent::article}
+	at TestMainClass.WishListProductDelete(TestMainClass.java:289)
+
+doOrderRepeatedlyTimeCash  Time elapsed: 12.383 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@data-sku="RUQ19TES899539-150452"]/parent::article"}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PMR164', ip: '192.168.42.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '11.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Windows\TEMP\scoped_dir5...}, goog:chromeOptions: {debuggerAddress: localhost:61221}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 311d955e3b184eee98116358d6391fbf
+*** Element info: {Using=xpath, value=//button[@data-sku="RUQ19TES899539-150452"]/parent::article}
+	at TestMainClass.doOrderRepeatedlyTimeCash(TestMainClass.java:363)
+
+stockUploadOnLive  Time elapsed: 20.649 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[741]> but was:<[2467]>
+	at TestMainClass.stockUploadOnLive(TestMainClass.java:467)
+
+registrationOkMale  Time elapsed: 15.855 s  <<< ERROR!
+org.openqa.selenium.InvalidSelectorException: 
+invalid selector: Unable to locate an element with the xpath expression //td[text()=nenashev7480@mail.ru] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//td[text()=nenashev7480@mail.ru]' is not a valid XPath expression.
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PMR164', ip: '192.168.42.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '11.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Windows\TEMP\scoped_dir5...}, goog:chromeOptions: {debuggerAddress: localhost:61325}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 059c366cf8f2f786f186a763c57a10b5
+*** Element info: {Using=xpath, value=//td[text()=nenashev7480@mail.ru]}
+	at TestMainClass.registrationOkMale(TestMainClass.java:229)
+
+doOrderRepeatedlyTimeCreditCard  Time elapsed: 12.451 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@data-sku="RUQ19TES899539-150452"]/parent::article"}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PMR164', ip: '192.168.42.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '11.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Windows\TEMP\scoped_dir3...}, goog:chromeOptions: {debuggerAddress: localhost:61374}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b573d0ccaa92ffdd976499f5127f698d
+*** Element info: {Using=xpath, value=//button[@data-sku="RUQ19TES899539-150452"]/parent::article}
+	at TestMainClass.doOrderRepeatedlyTimeCreditCard(TestMainClass.java:392)
+

@@ -1,11 +1,5 @@
-import com.codeborne.selenide.SelenideElement;
-
-import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 
 public class MainPage {
     private WebDriver driver;
@@ -16,7 +10,7 @@ public class MainPage {
 
     By searchInput = By.xpath("//input[@id=\"searchInput\"]");
     By registration = By.xpath("//span[@class=\"l-header__bottom-item-subline\"]");
-    By myAccount = By.xpath("//span[@class=\"l-header__bottom-item-title has-arrow\"]");
+    By myAccount = By.xpath("//span[@class=\"l-header__bottom-item-subline\"]");
     By wishSpan = By.xpath("//span[text()='Список желаний']");
     By basketSpan = By.xpath("//span[text()='Корзина']");
     By novelties = By.xpath("//a[text()='\n" +

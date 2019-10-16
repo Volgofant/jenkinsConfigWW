@@ -9,14 +9,14 @@ public class BillPages {
 
     By genderFemale = By.xpath("//input[@id=\"billing-frau-input\"]");
     By genderMale = By.xpath("//input[@id=\"billing-herr-input\"]");
-    By name = By.xpath("//input[@id=\"billing-name-input\"]");
-    By surname = By.xpath("//input[@id=\"billing-lastName-input\"]");
-    By companyName = By.xpath("//input[@id=\"billing-company-input\"]");
-    By streetNumber = By.xpath("//input[@id=\"billing-street\"]");
-    By advancedAddress = By.xpath("//input[@id=\"billing-street2\"]");
-    By mailIndex = By.xpath("//input[@id=\"billing-code-input\"]");
-    By city = By.xpath("//input[@id=\"BillingAddressForm_city\"]");
-    By phone = By.xpath("//input[@id=\"billing-phone-input\"]");
+    By name = By.xpath("//input[@id=\"shipping-name-input\"]");
+    By surname = By.xpath("//input[@id=\"shipping-lastName-input\"]");
+    By companyName = By.xpath("//input[@id=\"shipping-company-input\"]");
+    By streetNumber = By.xpath("//input[@id=\"shipping-street\"]");
+    By advancedAddress = By.xpath("//input[@id=\"shipping-street2\"]");
+    By mailIndex = By.xpath("//input[@id=\"shipping-code-input\"]");
+    By city = By.xpath("//input[@id=\"ShippingAddressForm_city\"]");
+    By phone = By.xpath("//input[@id=\"shipping-phone-input\"]");
     By differentAddress = By.xpath("//input[@id=\"checkout__forms__info2Form__input\"]");
     By buttonNextStep = By.xpath("//button[@class=\"checkoutBtn blockCheckoutHeading__button js-blockCheckoutHeading__button btn-primary js-submitPayment\"]");
     By creditCard = By.xpath("//input[@id=\"yandex_creditcard\"]");
