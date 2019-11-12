@@ -63,6 +63,11 @@
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
+<!--            <plugin>-->
+<!--                <groupId>com.github.zetten</groupId>-->
+<!--                <artifactId>xvfb-maven-plugin</artifactId>-->
+<!--                <version>1.4.0</version>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 <dependencies>
@@ -101,14 +106,6 @@
         <version>5.4.0</version>
         <scope>test</scope>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/com.github.mike10004/xvfb-testing -->
-    <dependency>
-        <groupId>com.github.mike10004</groupId>
-        <artifactId>xvfb-testing</artifactId>
-        <version>0.19</version>
-        <scope>test</scope>
-    </dependency>
-
 </dependencies>
 
 </project>
