@@ -58,12 +58,12 @@ public class TestMainClass {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
-        // System.setProperty("webdriver.chrome.driver", "C:\\Users\\viktor.nenashev\\WebDrivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//         System.setProperty("webdriver.chrome.driver", "C:\\Users\\viktor.nenashev\\WebDrivers/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/usr/bin/google-chrome");
+//        options.setBinary("/usr/bin/google-chrome");
         options.addArguments("headless");
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
         mainPage = new MainPage(driver);
         //       mainPage.closeFuckingCoockie();
