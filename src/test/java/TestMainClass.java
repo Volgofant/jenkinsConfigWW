@@ -98,8 +98,7 @@ public class TestMainClass {
         registrationPage.checkBoxMailSpam();
         registrationPage.clickSignInButton();
         Assert.assertEquals("Обязательное поле", registrationPage.getErrorMessageNullName());
-
-//    }
+    }
 //
 //    @Test
 //    public void registrationNullSurNameTest() {
