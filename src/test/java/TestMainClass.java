@@ -64,7 +64,7 @@ public class TestMainClass {
         options.setHeadless(true);
         options.addArguments("--proxy-server='direct://'");
         options.addArguments("--proxy-bypass-list=*");
-        options.addArguments("--no-sandbox");
+        options.addArguments("no-sandbox");
 //        options.addArguments("headless");
         driver = new ChromeDriver(options);
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
