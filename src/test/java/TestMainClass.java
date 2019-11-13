@@ -58,7 +58,7 @@ public class TestMainClass {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //         System.setProperty("webdriver.chrome.driver", "C:\\Users\\viktor.nenashev\\WebDrivers/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/usr/bin/google-chrome");;
