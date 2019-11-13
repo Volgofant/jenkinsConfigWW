@@ -6,18 +6,13 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.io.FileHandler;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 public class TestMainClass {
@@ -61,35 +56,17 @@ public class TestMainClass {
     }
 
     @Before
-    public void setUp() throws MalformedURLException {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+    public void setUp() {
+//        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //        System.setProperty("webdriver.chrome.driver", "C:\\Users\\viktor.nenashev\\WebDrivers/chromedriver.exe");
-//        ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
 //        options.setBinary("/usr/bin/google-chrome");
-//        options.setHeadless(true);
-//        options.addArguments("--proxy-server='direct://'");
-//        options.addArguments("--proxy-bypass-list=*");
-//        options.addArguments("--no-sandbox");
+        options.setHeadless(true);
+        options.addArguments("--proxy-server='direct://'");
+        options.addArguments("--proxy-bypass-list=*");
+        options.addArguments("--no-sandbox");
 //        options.addArguments("headless");
-//        driver = new ChromeDriver(options);
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setExperimentalOption("prefs", new HashMap<String, Object>(){
-            {
-                put("profile.default_content_settings.popups", 0);
-                put("download.default_directory", "/home/selenium/Downloads");
-                put("download.prompt_for_download", false);
-                put("download.directory_upgrade", true);
-                put("safebrowsing.enabled", false);
-                put("plugins.always_open_pdf_externally", true);
-                put("plugins.plugins_disabled", new ArrayList<String>(){
-                    {
-                        add("Chrome PDF Viewer");
-                    }
-                });
-            }
-        });
-        chromeOptions.addArguments("headless");
-        driver = new ChromeDriver(chromeOptions);
+        driver = new ChromeDriver(options);
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
         mainPage = new MainPage(driver);
         //       mainPage.closeFuckingCoockie();
