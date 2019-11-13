@@ -63,6 +63,7 @@ public class TestMainClass {
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/usr/bin/google-chrome");;
         options.addArguments("headless");
+        options.addArguments("disable-gpu");
         driver = new ChromeDriver(options);
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
         mainPage = new MainPage(driver);
