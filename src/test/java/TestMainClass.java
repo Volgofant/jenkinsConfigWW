@@ -60,7 +60,7 @@ public class TestMainClass {
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //        System.setProperty("webdriver.chrome.driver", "C:\\Users\\viktor.nenashev\\WebDrivers/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/usr/bin/google-chrome");
+//        options.setBinary("/usr/bin/google-chrome");
         options.setHeadless(true);
         options.addArguments("--proxy-server='direct://'");
         options.addArguments("--proxy-bypass-list=*");
