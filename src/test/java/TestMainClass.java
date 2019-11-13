@@ -55,15 +55,16 @@ public class TestMainClass {
         return this;
     }
 
-
     @Before
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-//         System.setProperty("webdriver.chrome.driver", "C:\\Users\\viktor.nenashev\\WebDrivers/chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\viktor.nenashev\\WebDrivers/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/usr/bin/google-chrome");;
-        options.addArguments("headless");
-        options.addArguments("disable-gpu");
+        options.setBinary("/usr/bin/google-chrome");
+        options.setHeadless(true);
+        options.addArguments("--proxy-server='direct://'");
+        options.addArguments("--proxy-bypass-list=*");
+//        options.addArguments("headless");
         driver = new ChromeDriver(options);
         driver.get("https://alice-ru.shop-stage.ww-ru.ru/");
         mainPage = new MainPage(driver);
