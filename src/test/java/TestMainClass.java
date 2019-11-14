@@ -91,17 +91,23 @@ public class TestMainClass {
     }
 
     @Test
-    public void registrationNullNameTest() {
-        mainPage.clickRegistration();
-        registrationPage.insertSignInName("");
-        registrationPage.insertSignInSurname("Ненашев");
-        registrationPage.insertSignInMail("nenashev" + registrationPage.i + "@mail.ru");
-        registrationPage.insertSignInPass("1q2w3e4r");
-        registrationPage.checkBoxAgreement();
-        registrationPage.checkBoxMailSpam();
-        registrationPage.clickSignInButton();
-        Assert.assertEquals("Обязательное поле", registrationPage.getErrorMessageNullName());
+    public void check() {
+        driver.get("https://www.google.ru/");
+        driver.findElement(By.xpath("/input[@value=\"Поиск в Google\"]")).click();
     }
+
+//    @Test
+//    public void registrationNullNameTest() {
+//        mainPage.clickRegistration();
+//        registrationPage.insertSignInName("");
+//        registrationPage.insertSignInSurname("Ненашев");
+//        registrationPage.insertSignInMail("nenashev" + registrationPage.i + "@mail.ru");
+//        registrationPage.insertSignInPass("1q2w3e4r");
+//        registrationPage.checkBoxAgreement();
+//        registrationPage.checkBoxMailSpam();
+//        registrationPage.clickSignInButton();
+//        Assert.assertEquals("Обязательное поле", registrationPage.getErrorMessageNullName());
+//    }
 //
 //    @Test
 //    public void registrationNullSurNameTest() {
