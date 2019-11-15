@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -59,6 +60,7 @@ public class TestMainClass {
     public void setUp() {
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //        System.setProperty("webdriver.chrome.driver", "C:\\Users\\viktor.nenashev\\WebDrivers/chromedriver.exe");
+        WebDriverManager.chromedriver().version("77.0.3865.40").setup();
         ChromeOptions options = new ChromeOptions();
 //        options.setBinary("/usr/bin/google-chrome");
         options.setHeadless(true);
