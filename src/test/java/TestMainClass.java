@@ -60,7 +60,7 @@ public class TestMainClass {
     public void setUp() {
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //        System.setProperty("webdriver.chrome.driver", "C:\\Users\\viktor.nenashev\\WebDrivers/chromedriver.exe");
-        WebDriverManager.chromedriver().version("78.0.3904.70").setup();
+        WebDriverManager.chromedriver().version("76.0.3809.126").setup();
         ChromeOptions options = new ChromeOptions();
 //        options.setBinary("/usr/bin/google-chrome");
         options.setHeadless(true);
